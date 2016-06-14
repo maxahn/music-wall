@@ -1,0 +1,19 @@
+<h1>Tracks</h1>
+
+<a href='tracks/new'><button>Post New Track!</button></a>
+<% if @tracks %>
+  <% @tracks.reverse.each do |track| %>
+    <h2>
+      <a href="/tracks/<%=track.id.to_i%>">
+        <%= track.song_title %>
+      </a>
+      <small> [<%= track.author %>]</small>
+    </h2>
+    <p><a href=<%= track.url if track.url %>><%= track.url if track.url %></a></p>
+    <hr>
+  <% end %>
+<%end%>
+
+<div class='gifs'>
+  <img src="https://66.media.tumblr.com/99b2478862ec6fe3d55046d8af0013ca/tumblr_nx9az5jxA31tz6utlo1_500.gif"/>
+</div>

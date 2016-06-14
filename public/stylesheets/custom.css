@@ -1,0 +1,17 @@
+body  {
+  text-align: center;
+}
+
+div   {
+  margin: 15px;
+}
+
+form  {
+  display: inline-block;
+  text-align: right;
+}
+
+#submit-button {
+  text-align: center;
+}
+
