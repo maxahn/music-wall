@@ -1,0 +1,13 @@
+<h2>Profile</h2>
+
+<% if @find_user %>
+  <h3><%=@find_user.username%></h3>
+    <% if !@find_user.likes.empty? %>
+      <ul>Recent likes:
+      <% @find_user.likes.each do |like| %>
+        <li><%=like.song.title%></li>
+      <%end%>
+    <% end %>
+  <p>Joined: <%=@find_user.created_at%>
+<% end %>
+  

@@ -2,16 +2,15 @@ body  {
   text-align: center;
 }
 
-div   {
-  margin: 15px;
-}
 
 form  {
   display: inline-block;
-  text-align: right;
+  text-align: left;
 }
-
-#submit-button {
-  text-align: center;
+.error {
+  list-style-type: none;
 }
+.jumbotron {
+  padding: 20px;
+  padding-bottom: 50px;}
 

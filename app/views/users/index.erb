@@ -1,0 +1,16 @@
+<div>
+  <p>THIS IS THE USERS PAGE</p> 
+  <%if @users%>
+    <% @users.each do |user| %>
+      <h2><a href='users/<%=user.id%>'><%=user.username%></h2></a>
+        <%if user && !user.likes.empty?%>
+          <p>Recently liked songs:</p>
+          <%users.likes.each do |like|%>
+            <li>like.track.title</li>
+          <%end%>
+        <%end%> 
+      <hr>
+    <%end%> 
+  <%end%>
+</div>
+

@@ -1,0 +1,22 @@
+<% if @current_user %>
+  <div class='jumbotron'>
+    <h1 class='display-3'>TRACKTER</h1>
+    <p class='lead'>Post, rate, and share songs! Join our whopping 2 users in musical bliss!</p>
+    <hr class='m-y-2'>
+    <p>Sign up to start posting! Or login if you already made an account!</p>
+    <p class='lead'>
+      <a class='btn btn-primary btn-lg' href='/users/sign_up'>Sign Up</a>
+      <a class='btn btn-primary btn-lg' href='/users/login'>Login</a>
+    </p>
+  </div>
+<% else %>
+  <div class='jumbotron'>
+    <h1 class='display-2'>Welcome to TRACKTER, <%= current_user.try(:username) %>!</h1>
+
+    <p class='lead'>Look at some tracks!</p>
+    <a href='/tracks'><button type='button' class='btn btn-primary btn-lg btn-block'>Tracks</button></a>
+    <hr>
+    <p class='lead'>Post some tracks!</p>
+    <a href='/tracks/new'><button type='button' class='btn btn-primary btn-lg btn-block'>Post</button></a>
+  </div>
+<% end %>
